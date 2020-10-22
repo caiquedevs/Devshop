@@ -1,18 +1,17 @@
 <h1 align="center">
-  <img alt="Movacar" title="Movacar" src="https://github.com/caiquedevs/Devshop/blob/master/github/logo.svg" width="220px" />
+  <img alt="Devshop" title="Devshop" src="https://github.com/caiquedevs/Devshop/blob/main/github/logo.svg" width="220px" />
 </h1>
 
 <p align="center">
   <a href="#-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>
 </p>
 
 <br>
 
 <p align="center">
-  <img src="https://github.com/caiquedevs/Movacar/blob/master/github/demo.gif" width="100%" />
+  <img src="https://github.com/caiquedevs/Devshop/blob/main/github/demo.gif" width="100%" />
 </p>
 
 ## 🚀 Tecnologias
