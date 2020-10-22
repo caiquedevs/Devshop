@@ -11,7 +11,9 @@
 <br>
 
 <p align="center">
-  <img src="https://github.com/caiquedevs/Devshop/blob/main/github/demo.gif" width="100%" />
+  <kbd>
+    <img src="https://github.com/caiquedevs/Devshop/blob/main/github/demo.gif" width="100%" />
+  </kbd>
 </p>
 
 ## 🚀 Tecnologias
