@@ -61,7 +61,12 @@ export default function LoginPage() {
                     </Link>
                     <figcaption>
                       <span>{product.name}</span>
-                      <small>{product.price}</small>
+                      <small>
+                        {Intl.NumberFormat('pt-br', {
+                          style: 'currency',
+                          currency: 'BRL',
+                        }).format(product.price)}
+                      </small>
                     </figcaption>
                   </figure>
 

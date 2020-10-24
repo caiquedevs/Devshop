@@ -51,8 +51,7 @@ export const Figure = styled.figure`
 export const Description = styled.section`
   width: 100%;
   max-width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
   padding: 50px 30px;
 
   display: flex;
@@ -64,6 +63,8 @@ export const Description = styled.section`
 
   @media screen and (min-width: 1030px) {
     max-width: 50%;
+    height: 100vh;
+    max-height: 100vh;
     padding: 120px 80px 100px 80px;
   }
 

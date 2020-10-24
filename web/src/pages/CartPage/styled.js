@@ -23,6 +23,7 @@ export const Main = styled.main`
 
 export const EmptyCart = styled.section`
   width: 100%;
+  min-height: calc(100vh - 200px);
   padding-top: 20px;
 
   display: flex;
