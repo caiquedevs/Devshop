@@ -11,6 +11,7 @@ import { Main, EmptyCart } from './styled';
 import Header from '../../components/HeaderComponent';
 import Products from '../../components/CartComponent/Products';
 import Details from '../../components/CartComponent/Details';
+import Footer from '../../components/FooterComponent';
 
 export default function CartPage() {
   const cart = useSelector(state => state.cart.data);
@@ -24,32 +25,40 @@ export default function CartPage() {
 
   if (cart.length <= 0) {
     return (
-      <Container>
-        <Header arrow noCart />
+      <>
+        <Container>
+          <Header arrow noCart />
 
-        <Main>
-          <EmptyCart>
-            <FaOpencart size="60px" color="#222831" />
-            <h2>Seu carrinho está vazio</h2>
-            <p>
-              Adicione produtos clicando no botão “Comprar” na página de
-              produto.
-            </p>
-            <Link to="/category/new in">Voltar para página inicial</Link>
-          </EmptyCart>
-        </Main>
-      </Container>
+          <Main>
+            <EmptyCart>
+              <FaOpencart size="60px" color="#222831" />
+              <h2>Seu carrinho está vazio</h2>
+              <p>
+                Adicione produtos clicando no botão “Comprar” na página de
+                produto.
+              </p>
+              <Link to="/category/new in">Voltar para página inicial</Link>
+            </EmptyCart>
+          </Main>
+        </Container>
+
+        <Footer />
+      </>
     );
   }
 
   return (
-    <Container>
-      <Header arrow noCart />
+    <>
+      <Container>
+        <Header arrow noCart />
 
-      <Main>
-        <Products />
-        <Details />
-      </Main>
-    </Container>
+        <Main>
+          <Products />
+          <Details />
+        </Main>
+      </Container>
+
+      <Footer />
+    </>
   );
 }

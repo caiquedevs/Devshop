@@ -49,6 +49,7 @@ export default function ProductPage({ match }) {
       <Container>
         <Header arrow noSearch />
       </Container>
+
       <Main>
         <Figure>
           <img src={product.img_url} alt="product" />

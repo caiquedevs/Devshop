@@ -20,7 +20,7 @@ export const Label = styled.label`
   align-items: center;
   justify-content: center;
 
-  cursor: none;
+  cursor: default;
 
   @media screen and (min-width: 1030px) {
     cursor: pointer;

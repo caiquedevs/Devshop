@@ -3,8 +3,18 @@ import * as colors from '../../../styles/colors';
 
 export const Details = styled.div`
   width: 100%;
-  max-width: 417px;
-  padding-left: 15px;
+  margin-top: 40px;
+
+  @media screen and (min-width: 1030px) {
+    max-width: 417px;
+    padding-left: 15px;
+  }
+
+  @media screen and (min-width: 675px) {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const List = styled.ul`
@@ -17,7 +27,9 @@ export const List = styled.ul`
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 
-  animation: rightAnimate 0.8s;
+  @media screen and (min-width: 1030px) {
+    animation: rightAnimate 0.8s;
+  }
 `;
 
 export const ListItem = styled.li`

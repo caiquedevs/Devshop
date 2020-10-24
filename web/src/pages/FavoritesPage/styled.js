@@ -100,10 +100,16 @@ export const ItemList = styled.li`
     }
 
     figcaption {
-      padding: 0 40px;
+      padding: 0 15px;
+      margin-top: 15px;
 
       display: flex;
       flex-direction: column;
+
+      @media screen and (min-width: 675px) {
+        padding: 0 40px;
+        margin-top: 0px;
+      }
 
       span {
         margin-bottom: 11px;
@@ -166,11 +172,16 @@ export const ItemList = styled.li`
     }
 
     button:nth-child(2) {
+      margin-left: 15px;
       font-weight: 600;
       font-size: 15px;
       line-height: 16px;
 
       color: ${colors.silverDark};
+
+      @media screen and (min-width: 675px) {
+        margin-left: 0px;
+      }
     }
   }
 `;

@@ -4,20 +4,29 @@ import * as colors from '../../styles/colors';
 export const Main = styled.main`
   width: 100%;
   height: auto;
+  padding-top: 140px;
+
   display: flex;
+  flex-direction: column;
+
   position: absolute;
   top: 0;
   left: 0;
+
+  @media screen and (min-width: 1030px) {
+    padding-top: 0px;
+    flex-direction: row;
+  }
 `;
 
 export const Figure = styled.figure`
   width: 100%;
-  max-width: 50%;
-  height: 100vh;
+  max-width: 100%;
+  height: 50vh;
   max-height: 100vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   background-color: ${colors.ligth};
@@ -25,16 +34,26 @@ export const Figure = styled.figure`
 
   img {
     max-width: 100%;
-    max-height: 65%;
+    max-height: 90%;
+  }
+
+  @media screen and (min-width: 1030px) {
+    max-width: 50%;
+    height: 100vh;
+    align-items: center;
+
+    img {
+      max-height: 65%;
+    }
   }
 `;
 
 export const Description = styled.section`
   width: 100%;
-  max-width: 50%;
+  max-width: 100%;
   height: 100vh;
   max-height: 100vh;
-  padding: 120px 80px 100px 80px;
+  padding: 50px 30px;
 
   display: flex;
   flex-direction: column;
@@ -42,6 +61,11 @@ export const Description = styled.section`
   justify-content: space-between;
 
   background-color: ${colors.silverLigth};
+
+  @media screen and (min-width: 1030px) {
+    max-width: 50%;
+    padding: 120px 80px 100px 80px;
+  }
 
   h1 {
     font-weight: 600;
@@ -83,7 +107,6 @@ export const Description = styled.section`
   }
 
   p {
-    max-height: 97px;
     overflow: auto;
 
     margin-bottom: 20px;
@@ -92,6 +115,10 @@ export const Description = styled.section`
     line-height: 16px;
 
     color: ${colors.dark};
+
+    @media screen and (min-width: 1030px) {
+      max-height: 97px;
+    }
   }
 
   div.textGroup div#productColor {
