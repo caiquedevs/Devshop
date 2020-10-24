@@ -3,27 +3,42 @@ import * as colors from '../../styles/colors';
 
 export const Main = styled.main`
   width: 100%;
-  margin-top: 42px;
+  min-height: calc(100vh);
+  margin-top: 15px;
   padding-bottom: 100px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media screen and (min-width: 675px) {
+    margin-top: 42px;
+  }
+
   > small {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 16px;
     color: ${colors.silverDark};
+
+    @media screen and (min-width: 675px) {
+      font-size: 15px;
+    }
   }
 
   h1 {
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
     font-weight: bold;
-    font-size: 40px;
+    font-size: 22px;
     line-height: 44px;
     color: ${colors.blueDark};
+
+    @media screen and (min-width: 675px) {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
   }
 `;
 
@@ -38,9 +53,10 @@ export const List = styled.ul`
 
 export const ItemList = styled.li`
   width: 100%;
-  padding: 20px 40px;
+  padding: 30px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
@@ -52,16 +68,27 @@ export const ItemList = styled.li`
   animation: topAnimate 0.5s;
   transition: 0.5s all;
 
+  @media screen and (min-width: 675px) {
+    flex-direction: row;
+    padding: 20px 40px;
+  }
+
   + li {
     margin-top: 30px;
   }
 
   figure {
     width: 100%;
-    height: 100px;
+    height: auto;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 675px) {
+      height: 100px;
+      flex-direction: row;
+    }
 
     a:hover {
       filter: none;
@@ -101,14 +128,24 @@ export const ItemList = styled.li`
   }
 
   div.btnGroup {
+    width: 100%;
+    margin-top: 20px;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 675px) {
+      width: auto;
+      margin-top: 0px;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     button:nth-child(1) {
       width: 108px;
       height: 40px;
-      margin-bottom: 13px;
 
       display: flex;
       align-items: center;
@@ -122,6 +159,10 @@ export const ItemList = styled.li`
       line-height: 16px;
 
       color: ${colors.ligth};
+
+      @media screen and (min-width: 675px) {
+        margin-bottom: 13px;
+      }
     }
 
     button:nth-child(2) {
@@ -136,12 +177,13 @@ export const ItemList = styled.li`
 
 export const EmptyFavorites = styled.section`
   width: 100%;
+  min-height: calc(100vh - 200px);
   padding-top: 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  text-align: center;
   h2 {
     margin-top: 20px;
     margin-bottom: 10px;
