@@ -17,34 +17,36 @@ function HeaderComponent({ arrow, noFavorite, noCart, noSearch }) {
 
   return (
     <Header>
-      <Link to="/category/new in">
-        <img src={logo} alt="logo" />
-      </Link>
+      <nav>
+        <Link to="/category/new in">
+          <img src={logo} alt="logo" />
+        </Link>
 
-      <SearchBar noSearch={noSearch} />
+        <SearchBar noSearch={noSearch} />
 
-      <div className="buttonGroup">
-        <BtnBackArrow
-          arrow={arrow}
-          type="button"
-          onClick={() => history.goBack()}
-        >
-          <img src={backArrowIcon} alt="back arrow" />
-        </BtnBackArrow>
+        <div className="buttonGroup">
+          <BtnBackArrow
+            arrow={arrow}
+            type="button"
+            onClick={() => history.goBack()}
+          >
+            <img src={backArrowIcon} alt="back arrow" />
+          </BtnBackArrow>
 
-        <BtnFavorite to="/favorites" nofavorite={noFavorite ? 1 : 0}>
-          <Favorite />
-        </BtnFavorite>
+          <BtnFavorite to="/favorites" nofavorite={noFavorite ? 1 : 0}>
+            <Favorite />
+          </BtnFavorite>
 
-        <BtnCart to="/cart" nocart={noCart ? 1 : 0} active={countCart}>
-          <RiShoppingCartLine />
-          <div className="countCart">{countCart}</div>
-        </BtnCart>
+          <BtnCart to="/cart" nocart={noCart ? 1 : 0} active={countCart}>
+            <RiShoppingCartLine />
+            <div className="countCart">{countCart}</div>
+          </BtnCart>
 
-        <BtnExit type="button">
-          <img src={exit} alt="exit" />
-        </BtnExit>
-      </div>
+          <BtnExit type="button">
+            <img src={exit} alt="exit" />
+          </BtnExit>
+        </div>
+      </nav>
     </Header>
   );
 }

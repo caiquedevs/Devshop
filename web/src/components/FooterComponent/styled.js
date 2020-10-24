@@ -20,18 +20,36 @@ export const Footer = styled.footer`
   }
 
   section {
-    padding: 40px 0;
+    padding: 40px 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (min-width: 1030px) {
+      flex-direction: row;
+      padding: 40px 30px;
+    }
   }
 
   section span {
+    margin-top: 10px;
     color: ${colors.ligth};
+
+    @media screen and (min-width: 1030px) {
+      margin: 0;
+    }
   }
 
   section p {
     color: #a2a1a7;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (min-width: 1030px) {
+      margin: 0;
+      text-align: left;
+    }
   }
 
   section svg {
@@ -47,7 +65,7 @@ export const Footer = styled.footer`
     }
 
     &.gh:hover {
-      color: black;
+      color: silver;
     }
 
     &.ig:hover {
@@ -72,7 +90,7 @@ export const Footer = styled.footer`
 
   section#sectionOne ul li {
     + li {
-      margin-left: 30px;
+      margin-left: 15px;
     }
 
     a {
@@ -81,6 +99,12 @@ export const Footer = styled.footer`
       font-weight: 500;
       text-decoration: none;
       color: ${colors.ligth};
+    }
+
+    @media screen and (min-width: 1030px) {
+      + li {
+        margin-left: 30px;
+      }
     }
   }
 `;

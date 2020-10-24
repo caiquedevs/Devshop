@@ -3,14 +3,24 @@ import * as colors from '../../styles/colors';
 
 export const SearchBar = styled.form`
   width: 100%;
-  max-width: 599px;
-  margin: 0 30px;
+  margin: 0;
   display: ${props => (props.noSearch ? 'none' : 'flex')};
+
+  position: absolute;
+  bottom: -55px;
+
+  @media screen and (min-width: 1030px) {
+    max-width: 599px;
+    margin: 0 30px;
+    position: relative;
+    bottom: initial;
+  }
 
   input {
     width: 100%;
     height: 50px;
-    padding: 0 30px;
+    padding-left: 30px;
+    padding-right: 50px;
 
     border: none;
     border-radius: 5px;

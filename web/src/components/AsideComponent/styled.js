@@ -3,7 +3,11 @@ import * as colors from '../../styles/colors';
 
 export const Aside = styled.aside`
   width: 100%;
-  max-width: 235px;
+  max-width: 100%;
+
+  @media screen and (min-width: 1030px) {
+    max-width: 235px;
+  }
 `;
 
 export const List = styled.ul`

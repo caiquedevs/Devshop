@@ -3,21 +3,26 @@ import * as colors from '../../styles/colors';
 
 export const Main = styled.main`
   width: 100%;
-  margin-top: 52px;
+  margin-top: 20px;
   padding-bottom: 100px;
 
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 1030px) {
+    flex-direction: row;
+    margin-top: 52px;
+  }
 `;
 
 export const Banner = styled.section`
   width: 100%;
   height: 340px;
-  padding: 0 100px;
   margin-top: 32px;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -25,6 +30,11 @@ export const Banner = styled.section`
   border-radius: 40px;
 
   animation: fadeInAnimate 0.8s;
+  overflow: hidden;
+
+  @media screen and (min-width: 1100px) {
+    display: flex;
+  }
 
   div.textArea {
     h1 {
@@ -45,9 +55,4 @@ export const Banner = styled.section`
       color: #000000;
     }
   }
-
-  /* figure img {
-    left: 25px;
-    top: -15px;
-  } */
 `;
